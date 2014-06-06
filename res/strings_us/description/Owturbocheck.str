@@ -1,0 +1,10 @@
+// C4D-StringResource
+// Identifier	Text
+
+STRINGTABLE Owposecloner
+{
+	Owposecloner "wTurboCheck";
+    W_GROUPLIST_MEMBERS "Members";
+    W_POSECLONER_TEST_FIELD "Test field";
+    W_POSECLONER_TEST_CICLE "Test field cycle";
+}
