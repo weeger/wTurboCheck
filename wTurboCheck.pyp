@@ -10,7 +10,7 @@ import os
 # Copyright Romain WEEGER 2010 / 2014
 # http://www.wexample.com
 # Licensed under the MIT and GPL licenses :
-#  - http://www.opensource.org/licenses/mit-license.php
+# - http://www.opensource.org/licenses/mit-license.php
 #  - http://www.gnu.org/licenses/gpl.html
 # If you enjoy this plugin, please
 # contact me, and say me hello \o/
@@ -21,7 +21,7 @@ import os
 # Available at http://support.turbosquid.com/entries/20203606-CheckMate-Pro-Specification
 
 PLUGIN_ID = 1032263
-VERSION = '1.0'
+VERSION = '1.1'
 
 # Command laucher from plugins menu
 class wTurboCheckCommand(c4d.plugins.CommandData):
@@ -63,6 +63,12 @@ def check_object(object, doc):
             message_success += 'OK : Object has layer : ' + object.GetLayerObject(doc).GetName() + "\n"
 
         c4d.EventAdd()
+
+        # Count polygons
+        message_success += '- ' + str(len(object.GetAllPolygons())) + ' polygons' + "\n"
+        
+        # Count points
+        message_success += '- ' + str(len(object.GetAllPoints())) + ' points' + "\n"
 
         # Display result.
         if message_error != '':
