@@ -5,5 +5,7 @@ wTurboCheck provides additional validation for TurboSquid models submission on p
 
 - Check for poles containing more than 5 edges by points
 - Check if object is contained into a layer
+- Return polygon count (not subdivided), and symmetry total estimation
+- Return points count (not subdivided), and symmetry total estimation, taking care of merged points
 
 To run it, just install it as a standard C4D plugin, select your mesh add launch it from the plugins menu. It should return the result of his inspection.
